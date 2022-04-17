@@ -1,0 +1,42 @@
+[
+    {
+        "_id": "625c0ed2b75d5762a24f4288",
+        "picture": "https://images.unsplash.com/photo-1468493858157-0da44aaf1d13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+        "price1": 30,
+        "price2": 20,
+        "name": "Dental Implant",
+        "description": "Dental implants are replacement tooth roots. Implants provide a strong foundation for fixed (permanent) or removable replacement teeth that are made to match your natural teeth.\r\n"
+    },
+    {
+        "_id": "625c0ed26344dc806c33dfbc",
+        "picture": "https://images.unsplash.com/photo-1584650589355-e891970a9081?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "price1": 39,
+        "price2": 23,
+        "name": "General Dental Care",
+        "description": "This dental service includes routine dental examinations or check-ups & oral health advice.\r\n"
+    },
+    {
+        "_id": "625c0ed20c1a449e1bec08d6",
+        "picture": "https://images.unsplash.com/photo-1620775997990-ee3c25938b4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "price1": 39,
+        "price2": 36,
+        "name": "Teeth Whitening",
+        "description": "Teeth bleaching & teeth whitening are fast, easy ways to brighten teeth and enhance your smile.\r\n"
+    },
+    {
+        "_id": "625c0ed2c9695087b0282e2d",
+        "picture": "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "price1": 37,
+        "price2": 35,
+        "name": " Dental Crowns",
+        "description": "A dental crown functions to strengthen teeth, restore their original shape  and improve their appearance. Dental crowns are also used to hold dental bridges in place and cover dental implants.\r\n"
+    },
+    {
+        "_id": "625c0ed263f9e71bcb7e935c",
+        "picture": "https://images.unsplash.com/photo-1468493858157-0da44aaf1d13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+        "price1": 38,
+        "price2": 37,
+        "name": "Root Canal Therapy",
+        "description": "A root canal is a dental procedure that is used to repair teeth that are infected or badly decayed. Some people fear root canal treatments because they assume they are painful. Most people report that the procedure is no more painful than having a filling placed.\r\n"
+    }
+]

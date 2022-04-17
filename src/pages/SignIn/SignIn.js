@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const SignIn = () => {
@@ -13,6 +15,15 @@ const SignIn = () => {
         email: '',
         password: ''
     })
+
+    const navigate = useNavigate();
+
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
 
     const handleEmailBlur = event => {
         const emailReg = /\S+@\S+\.\S+/;
@@ -37,18 +48,28 @@ const SignIn = () => {
             setUserInfo({ ...userInfo, password: '' });
         }
     }
+
+    const handleSignin = event => {
+        event.preventDefault();
+        signInWithEmailAndPassword(userInfo.email, userInfo.password)
+    }
+
+    if (user) {
+        navigate('/home');
+    }
+
     return (
         <div>
             <div className='mx-auto w-50 mt-5 '>
-                <Form className='border border-left-0 p-4 mb-5'>
+                <Form onSubmit={handleSignin} className='border border-left-0 p-4 mb-5'>
                     <h2 className='mb-2'> Sign-In </h2>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" />
+                        <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required />
                     </Form.Group>
                     {errors?.email && <p className='text-danger'>{errors.email}</p>}
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" />
+                        <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" required />
                     </Form.Group>
                     {errors?.password && <p className='text-danger'>{errors.password}</p>}
 

@@ -7,6 +7,7 @@ import auth from '../../firebase.init';
 
 
 const SignUp = () => {
+
     const [userInfo, setUserInfo] = useState({
         email: '',
         password: '',
@@ -26,6 +27,8 @@ const SignUp = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
 
     const navigate = useNavigate();
+
+
 
     const handleEmailBlur = event => {
         const emailReg = /\S+@\S+\.\S+/;
@@ -81,17 +84,17 @@ const SignUp = () => {
                 <Form onSubmit={handleUserSignUp} className='mt-5 border border-left-0 p-4'>
                     <h2 > Sign-Up </h2>
                     <Form.Group className="mb-3 mt-3" controlId="formBasicEmail">
-                        <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" />
+                        <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required />
                     </Form.Group>
                     {errors?.email && <p className='text-danger'>{errors.email}</p>}
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" />
+                        <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" required />
                     </Form.Group>
                     {errors?.password && <p className='text-danger'>{errors.password}</p>}
 
                     <Form.Group className="mb-3" controlId="formBasicPassword2">
-                        <Form.Control onBlur={handleConfirmPassword} type="password" placeholder="Confirm Password" />
+                        <Form.Control onBlur={handleConfirmPassword} type="password" placeholder="Confirm Password" required />
                     </Form.Group>
 
                     <div className="d-grid gap-2">

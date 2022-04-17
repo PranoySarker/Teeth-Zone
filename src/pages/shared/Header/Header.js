@@ -1,12 +1,20 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import logo from '../../../images/logo.png';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+
+    const handleLogout = () => {
+        signOut(auth);
+    };
     return (
-        <div>
-            <Navbar bg="light" expand="lg">
+        <div >
+            <Navbar bg="light" expand="lg" className='py-0'>
                 <Container>
                     <Navbar.Brand to="/home">
                         <div className='d-flex align-items-center '>
@@ -20,11 +28,22 @@ const Header = () => {
                             <Nav.Link as={Link} to="/">Home</Nav.Link>
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
                             <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
+                            <Nav.Link as={Link} to="/checkout">Check-Out</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Navbar.Text>
-                                <Nav.Link as={Link} to="/signin"><Button variant="outline-dark">Sign in</Button></Nav.Link>
-                            </Navbar.Text>
+                            {
+                                user ?
+                                    <Navbar.Text>
+                                        <Nav.Link className='d-flex align-items-center'>
+                                            <p className='mt-2 px-3'> User: {user.email}</p>
+                                            <Button variant="outline-dark" onClick={handleLogout}>Sign out</Button>
+                                        </Nav.Link>
+                                    </Navbar.Text>
+                                    :
+                                    <Navbar.Text>
+                                        <Nav.Link as={Link} to="/signin"><Button variant="outline-dark">Sign in</Button></Nav.Link>
+                                    </Navbar.Text>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

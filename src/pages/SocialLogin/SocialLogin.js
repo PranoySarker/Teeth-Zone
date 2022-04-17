@@ -1,7 +1,24 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import useSocial from '../../hooks/useSocial';
 
 const SocialLogin = () => {
+    const { handleSignInWithGoogle, user, error } = useSocial();
+
+    const navigate = useNavigate();
+
+    if (user) {
+        navigate('/home');
+    }
+
+    if (error) {
+        return (
+            <div>
+                <p>Error: {error.message}</p>
+            </div>
+        );
+    }
     return (
         <div>
             <div className='d-flex align-items-center mt-3'>
@@ -11,7 +28,7 @@ const SocialLogin = () => {
             </div>
             <div>
                 <div className="d-grid gap-2">
-                    <Button variant="outline-secondary" className='border border-secondary rounded'>
+                    <Button onClick={handleSignInWithGoogle} variant="outline-secondary" className='border border-secondary rounded'>
                         <h5 className='fw-bold '>Google</h5>
                     </Button>
                 </div>

@@ -6,7 +6,7 @@ const Banner = () => {
         <div className='banner-body'>
             <div className='banner-img'>
                 <div class="typewriter">
-                    <h2 className='text-uppercase'>your professional dentist</h2>
+                    <h2 className='text-uppercase'>your personal dentist</h2>
                 </div>
             </div>
         </div>

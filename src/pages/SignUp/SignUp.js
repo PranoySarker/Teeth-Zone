@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const SignUp = () => {
     return (
@@ -26,9 +27,9 @@ const SignUp = () => {
                             Create an account
                         </Button>
                     </div>
-                    <p className='mt-2'>Already have an account?<Link to='/signin' style={{ textDecoration: 'none' }} className='text-primary px-3'>Login please</Link></p>
+                    <p className='mt-2'>Already have an account?<Link to='/signin' style={{ textDecoration: 'none' }} className='text-primary px-3'>Signin please</Link></p>
                 </Form>
-
+                <SocialLogin></SocialLogin>
             </div>
 
         </div>

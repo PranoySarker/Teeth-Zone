@@ -1,13 +1,14 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const SignIn = () => {
     return (
         <div>
             <div className='mx-auto w-50 mt-5 '>
                 <Form className='border border-left-0 p-4 mb-5'>
-                    <h2 > Login </h2>
+                    <h2 className='mb-2'> Sign-In </h2>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Control type="email" placeholder="Enter email" />
                     </Form.Group>
@@ -23,6 +24,7 @@ const SignIn = () => {
                     </div>
                     <p className=' mt-2'>Don't have an account?<Link to='/signup' className='text-primary px-2' style={{ textDecoration: 'none' }}>Sign-Up please</Link></p>
                 </Form>
+                <SocialLogin></SocialLogin>
             </div>
 
         </div>

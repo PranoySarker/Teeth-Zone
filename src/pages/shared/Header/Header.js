@@ -14,10 +14,10 @@ const Header = () => {
     };
     return (
         <div >
-            <Navbar bg="light" expand="lg" className='py-0'>
+            <Navbar bg="light" expand="lg" className='py-0' >
                 <Container>
                     <Navbar.Brand to="/home">
-                        <div className='d-flex align-items-center '>
+                        <div className='d-flex align-items-center'>
                             <img height={30} src={logo} alt="" />
                             <p className='mt-3'>Teeth-Zone</p>
                         </div>
@@ -28,7 +28,6 @@ const Header = () => {
                             <Nav.Link as={Link} to="/">Home</Nav.Link>
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
                             <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
-                            <Nav.Link as={Link} to="/checkout">Check-Out</Nav.Link>
                         </Nav>
                         <Nav>
                             {

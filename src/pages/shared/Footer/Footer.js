@@ -16,7 +16,7 @@ const Footer = () => {
                         <h5>ADDRESS</h5>
                         <p>3674 Harrison Street</p>
                         <p>San Francisco, CA 94143, USA</p>
-                        <p>Mon–Fri: 8:00 am to 8:00 pmSat–Sun: 8:00 am to 4:00 pm</p>
+                        <p>Mon–Fri: 8:00 am to 8:00 pm Sat–Sun: 8:00 am to 4:00 pm</p>
                     </div>
                 </div >
             </div >

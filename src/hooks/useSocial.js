@@ -6,7 +6,7 @@ const googleProvider = new GoogleAuthProvider();
 
 
 const useSocial = () => {
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState('');
     const [error, setError] = useState('');
 
     const handleSignInWithGoogle = () => {

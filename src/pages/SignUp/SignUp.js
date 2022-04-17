@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -74,8 +74,10 @@ const SignUp = () => {
         navigate('/home');
     }
 
+    let errorMessage;
     if (hookError) {
-
+        console.log(hookError);
+        errorMessage = <p className='text-danger'>Error: {hookError.message}</p>
     }
     return (
         <div>
@@ -102,6 +104,7 @@ const SignUp = () => {
                             Create an account
                         </Button>
                     </div>
+                    <p>{errorMessage}</p>
                     <p className='mt-2'>Already have an account?<Link to='/signin' style={{ textDecoration: 'none' }} className='text-primary px-3'>Signin please</Link></p>
                 </Form>
                 <SocialLogin></SocialLogin>

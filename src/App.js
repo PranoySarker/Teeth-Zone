@@ -7,6 +7,9 @@ import SignUp from './pages/SignUp/SignUp';
 import Services from './pages/Home/Services/Services';
 import About from './pages/About/About';
 import Header from './pages/shared/Header/Header';
+import RequireAuth from './pages/RequireAuth/RequireAuth';
+import CheckOut from './pages/CheckOut/CheckOut';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -19,6 +22,12 @@ function App() {
         <Route path='/services' element={<Services></Services>}></Route>
         <Route path='/signin' element={<SignIn></SignIn>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/checkout' element={
+          <RequireAuth>
+            <CheckOut></CheckOut>
+          </RequireAuth>
+        }></Route>
+        <Route path='/*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );

@@ -3,9 +3,9 @@ import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import useSocial from '../../hooks/useSocial';
 
-const SocialLogin = () => {
-    const { handleSignInWithGoogle, user, error } = useSocial();
 
+const SocialLogin = () => {
+    const { user, error, handleSignInWithGoogle } = useSocial();
     const navigate = useNavigate();
 
     if (user) {

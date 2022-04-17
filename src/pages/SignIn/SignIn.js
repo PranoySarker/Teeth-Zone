@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
@@ -22,7 +22,7 @@ const SignIn = () => {
         signInWithEmailAndPassword,
         user,
         loading,
-        error,
+        hookError,
     ] = useSignInWithEmailAndPassword(auth);
 
     const handleEmailBlur = event => {
@@ -58,6 +58,12 @@ const SignIn = () => {
         navigate('/home');
     }
 
+    let errorMessage;
+    if (hookError) {
+        console.log(hookError);
+        errorMessage = <p className='text-danger'>Error: {hookError.message}</p>
+    }
+
     return (
         <div>
             <div className='mx-auto w-50 mt-5 '>
@@ -78,7 +84,9 @@ const SignIn = () => {
                             Login
                         </Button>
                     </div>
+                    <p>{errorMessage}</p>
                     <p className=' mt-2'>Don't have an account?<Link to='/signup' className='text-primary px-2' style={{ textDecoration: 'none' }}>Sign-Up please</Link></p>
+
                 </Form>
                 <SocialLogin></SocialLogin>
             </div>

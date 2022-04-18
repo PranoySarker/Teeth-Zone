@@ -14,12 +14,6 @@ const firebaseConfig = {
     messagingSenderId: process.env.REACT_APP_messagingSenderId,
     appId: process.env.REACT_APP_appId
 
-    // apiKey: "AIzaSyDrgSphE3B8AMGswQhwOiWAMrsufLC65sQ",
-    // authDomain: "teeth-zone.firebaseapp.com",
-    // projectId: "teeth-zone",
-    // storageBucket: "teeth-zone.appspot.com",
-    // messagingSenderId: "1098248364502",
-    // appId: "1:1098248364502:web:6a83177028b47e931d8477"
 };
 
 // Initialize Firebase

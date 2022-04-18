@@ -24,30 +24,30 @@ const CheckOut = () => {
                     </div>
                 </div>
                 <div className="form-group mt-2">
-                    <label for="inputAddress2">Your dental health issues</label>
+                    <label htmlFor="inputAddress2">Your dental health issues</label>
                     <input type="text" className="form-control" id="inputAddress2" placeholder="E.g. General Dental Care, root canal, or dental implant etc." />
                 </div>
                 <div className="form-group mt-2">
-                    <label for="inputAddress">Address</label>
+                    <label htmlFor="inputAddress">Address</label>
                     <input type="text" className="form-control" id="inputAddress" placeholder="Block-D ,Mirpur-1 , Dhaka" />
                 </div>
                 <div className="form-row">
 
                     <div className="form-group col-md-4 mt-2">
-                        <label for="inputState">Treatment</label>
+                        <label htmlFor="inputState">Treatment</label>
                         <select id="inputState" className="form-control">
-                            <option selected>Click to choose..</option>
-                            <option>Oral Surgery</option>
-                            <option>General Dental Care</option>
-                            <option>Cosmetic Dentistry</option>
-                            <option>Dental Crowns</option>
+                            <option value='0'>Click to choose..</option>
+                            <option value='1'>Oral Surgery</option>
+                            <option value='2'>General Dental Care</option>
+                            <option value='3'>Cosmetic Dentistry</option>
+                            <option value='4'>Dental Crowns</option>
                         </select>
                     </div>
                 </div>
                 <div className="form- mt-2">
                     <div className="form-check">
                         <input className="form-check-input" type="checkbox" id="gridCheck" />
-                        <label className="form-check-label" for="gridCheck">
+                        <label className="form-check-label" htmlFor="gridCheck">
                             Check me out
                         </label>
                     </div>

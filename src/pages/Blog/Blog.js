@@ -1,8 +1,9 @@
 import React from 'react';
 
+
 const Blog = () => {
     return (
-        <div className='container'>
+        <div className='container blog-body'>
 
             <div className='bg-light mt-5'>
                 <h5> Difference between authorization and authentication.</h5>

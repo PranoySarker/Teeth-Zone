@@ -24,7 +24,7 @@ const SignUp = () => {
         user,
         loading,
         hookError,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const navigate = useNavigate();
 

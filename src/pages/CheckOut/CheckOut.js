@@ -13,6 +13,7 @@ const CheckOut = () => {
         <div className='container w-75'>
             <form className=''>
                 <div className="form-row mt-5">
+                    <h3 className='mb-3 text-center'>Check Out this form</h3>
                     <div className="form-group  mb-3">
 
                         <input type="email" className="form-control" id="inputEmail4" placeholder="Email" />
